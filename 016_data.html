@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <script>
+        const f1 = d3.scaleLinear().range([0, 100]).domain([0, 500])
+        console.log(f1(250))
+        console.log(f1(0))
+        console.log(f1(500))
+        console.log(f1(100))
+        console.log(f1(1000))
+
+        crayons = d3.scaleLinear()
+        .domain([-1, 0, 1])
+        .range(["orange", "white", "green"])
+        console.log(crayons(0.3))
+
+        const f2 = d3.scaleLinear().range([200, 500]).domain([20000000, 50000000])
+        console.log(f2(25000000))
+    </script>
+</body>
+</html>
